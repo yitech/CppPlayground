@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.0)
 
+project(Loadcurl)
+
 find_package(CURL)
-add_executable(curltest curltest.cc)
+add_executable(curltest main.cpp)
 if(CURL_FOUND)
     target_include_directories(curltest PRIVATE ${CURL_INCLUDE_DIR})
     target_link_libraries(curltest ${CURL_LIBRARY})
